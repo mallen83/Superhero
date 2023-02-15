@@ -5,16 +5,9 @@ public class Superman extends Superhero{
         super(name, health, isDead);
     }
 
-    public void HeatVision(String Batman) {
-
+    public void HeatVision(String name) {
+        System.out.println("Superman uses his heatvision to destroy his enemy.");
     }
 
-    public void attack(Superhero opponent) {
-        Random random = new Random();
-        int damage = random.nextInt(10);
-
-        opponent.determineHealth(damage);
-        System.out.println(opponent.getName() + " has taken a hit.");
-    }
 }
 
