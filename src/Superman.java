@@ -1,12 +1,17 @@
 import java.util.Random;
 
 public class Superman extends Superhero{
-    public Superman(String name, int health, boolean isDead) {
-        super(name, health, isDead);
+
+    public Superman(int health) {
+        super("Superman", health);
     }
 
-    public void HeatVision(String name) {
-        System.out.println("Superman uses his heatvision to destroy his enemy.");
+    public void heatVision(Superhero opponent) {
+        Random random = new Random();
+        int damage = random.nextInt(10);
+        opponent.determineHealth(damage);
+
+        System.out.println("Superman uses his heat vision as an attack on " + opponent.getName() + "." + " " + opponent.getName() + " energy has decrease to " + opponent.getHealth());
     }
 
 }

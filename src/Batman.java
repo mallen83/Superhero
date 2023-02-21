@@ -1,14 +1,22 @@
 import java.util.Random;
 
 public class Batman extends Superhero {
-
-    public Batman(String name, int health, boolean isDead) {
-        super(name, health, isDead);
+    public Batman(int health) {
+        super("Batman", health);
     }
 
-    public void Batarang(String name) {
-        System.out.println("Batman throws his batarang for his attack.");
+    public Batman(String name, int health) {
+        super(name, health);
+    }
+
+    public void batarang(Superhero opponent) {
+        Random random = new Random();
+        int damage = random.nextInt(10);
+        opponent.determineHealth(damage);
+
+    System.out.println("Batman throws his batarang at " + opponent.getName() + "." + " " + opponent.getName() + " energy has decrease to " + opponent.getHealth());
+
+
     }
 
 }
-

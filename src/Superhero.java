@@ -6,18 +6,16 @@ public class Superhero {
     private int health;
     private boolean isDead;
 
-    public Superhero(String name, int health, boolean isDead) {
+    public Superhero(String name, int health) {
         this.name = name;
         this.health = health;
-        this.isDead = isDead;
+
     }
 
     public void attack(Superhero opponent) {
         Random random = new Random();
         int damage = random.nextInt(10);
-
         opponent.determineHealth(damage);
-        System.out.println(opponent.getName() + " has loss power.");
     }
 
     public void determineHealth(int damageTaken) {
