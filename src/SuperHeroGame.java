@@ -28,7 +28,7 @@ public class SuperHeroGame {
             if (batman.isDead) {
                 System.out.println("Batman is dead");
             }
-            if (hulk.isDead()) {
+            if (hulk.isDead) {
                 System.out.println("Hulk is dead");
             }
         }
