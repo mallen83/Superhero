@@ -22,10 +22,10 @@ public class SuperHeroGame {
             batman.batarang(superman);
             hulk.hulkSmash(batman);
 
-            if (superman.isDead()) {
+            if (superman.isDead) {
                 System.out.println("Superman is dead");
             }
-            if (batman.isDead()) {
+            if (batman.isDead) {
                 System.out.println("Batman is dead");
             }
             if (hulk.isDead()) {
@@ -35,9 +35,9 @@ public class SuperHeroGame {
         Superhero superhero1;
         Superhero superhero2;
 
-        if (!superman.isDead()) {
+        if (!superman.isDead) {
             superhero1 = superman;
-            if (!batman.isDead()) {
+            if (!batman.isDead) {
                 superhero2 = batman;
             } else {
                 superhero2 = hulk;
