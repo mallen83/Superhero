@@ -53,12 +53,6 @@ public class SuperHeroGame {
                     superhero2.attack(superhero1);
                     System.out.println(superhero2.getName() + " attacks " + superhero1.getName()  + " energy has decrease to " + superhero1.getHealth());
                 }
-                if (superhero1.isDead()) {
-                    System.out.println(superhero1.getName() + " is dead.");
-                }
-                if (superhero2.isDead()) {
-                    System.out.println(superhero2.getName() + " is dead.");
-                }
             }
             if (!superhero1.isDead) {
                 System.out.println(superhero1.getName() + " has won the battle.");
