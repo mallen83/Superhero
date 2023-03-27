@@ -2,12 +2,13 @@ import java.util.Random;
 
 public class Hulk extends Superhero {
 
-    public Hulk(String name, int health, boolean isDead) {
-        super(name, health, isDead);
+    public Hulk(int health) {
+        super("Hulk", health);
     }
 
     //define special attack a new method.type of superhero
-    public void HulkSmash(String name) {
-        System.out.println("Hulk uses his powerful smash to gain advantage over his opponent.");
+    public void hulkSmash(Superhero opponent) {
+        attack(opponent);
+        System.out.println("Hulk uses his powerful attack on " + opponent.getName() + "." + " " + opponent.getName() + " energy has decrease to " + opponent.getHealth());
     }
 }

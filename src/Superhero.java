@@ -4,7 +4,7 @@ public class Superhero {
 
     private String name;
     private int health;
-    private boolean isDead;
+    public boolean isDead;
 
     public Superhero(String name, int health) {
         this.name = name;
@@ -18,14 +18,14 @@ public class Superhero {
         opponent.determineHealth(damage);
     }
 
-    public void determineHealth(int damageTaken) {
+    public boolean determineHealth(int damageTaken) {
         if (this.getHealth() - damageTaken <= 0) {
             this.setHealth(0);
             this.setDead(true);
-        }
-        else {
+        } else {
             this.setHealth(this.health - damageTaken);
         }
+        return false;
     }
 
     public Superhero() {
